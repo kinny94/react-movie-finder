@@ -2,7 +2,7 @@ var AppDispatcher = require('../dispatcher/appDispatcher');
 var AppConstants = require('../constants/appConstants');
 var EventEmitter = require('events').EventEmitter;
 var assign = require('object-assign');
-var AppApi = require('./utils/appApi.js');
+var AppApi = require('../utils/appApi.js');
 
 var CHANGE_EVENT = 'change';
 
@@ -32,4 +32,4 @@ AppDispatcher.register(function(payload){
     return true;
 });
 
-module.exports = AppStore;
+module.exports = AppStore;  
