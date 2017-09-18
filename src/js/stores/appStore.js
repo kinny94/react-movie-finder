@@ -26,7 +26,11 @@ var AppStore = assign({}, EventEmitter.prototype, {
 AppDispatcher.register(function(payload){
     var action = payload.action;
     switch(action.actionType){
-
+        case AppConstants.SEARCH_MOVIES:
+            console.log("Searching for movies " + action.movie.title);
+            AppApi.searchMovies(action.movie); 
+            AppStore.emit(CHANGE_EVENT);
+            break;
     }
 
     return true;
